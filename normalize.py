@@ -9,12 +9,6 @@ def encode ( column ):
 	df[column] = df[column].str.decode('unicode_escape')
 	df[column] = df[column].str.encode('utf8', errors='strict') 
 
-	#df[column] = df[column].drop( some_labels )
-
-	#df[df.name != 'Tina']
-
-
-
 #convert FooDuration to floating point format
 df['FooDuration'] = pd.to_timedelta(df['FooDuration'], unit='s')
 
